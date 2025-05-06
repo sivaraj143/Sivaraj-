@@ -1,12 +1,13 @@
 import streamlit as st
-st.title("sivaraj")
+st.title("Sivaraj")
 st.sidebar.title("Give us your valid Info")
-s=st.sidebar.text_input("Enter your name ","Type here ...")
-st.sidebar.text_input("Enter your Email ","Type here ...")
-st.sidebar.date_input("Enter your DOB ","Type here ...")
-st.sidebar.number_input("Enter your Mobile Number","Type here ...")
-st.sidebar.radio("Select your Gender",["Male","Female","Others"])
-if st.button("Submit"):
-    name=s.title()
-    st.subheader("Hello, "name" !")
-    st.success("Your details submited successfully")
+st.sidebar.text_input("Enter your Email ")
+if(st.sidebar.button("Register")):
+    st.sidebar.success("Your email verified")
+st.text_input("Enter your name ")
+st.date_input("Enter your DOB ")
+st.text_input("Enter your Mobile Number")
+st.radio("Select your Gender",["Male","Female","Others"])
+if(st.button("Submit")):
+    st.write("Thank you for yor registration")
+    st.success("Your Completed successfully")
